@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+/* estilo lisata de tarefa */
+* {
+  font-family: Roboto, sans-serif;
+  color: #333;
+  list-style-type: none;
+}
+
+body {
+  background: #edf0f2;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+}
+
+#app {
+  padding: 25px;
+}
+
+input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #cccc;
+  border-radius: 3px;
+  width: 250px;
+}
+
+form button {
+  background: #43bc70;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #fff;
+  border: 0;
+  border-radius: 3px;
+}
+
+#tarefas button {
+  background: transparent;
+  font-size: 14px;
+  border: 0;
+  color: red;
+  text-transform: uppercase;
+}
+/* animação do mario */
+.board{
+    width: 100%;
+    height: 100vh;
+    border-bottom: 15px solid #03bb22;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+.pipe{ 
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    right: 0;
+    animation: pipe-animation 2s infinite linear;
+}
+/* TUBO*/
+.mario{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    animation: jump 500ms ease-out;
+}
+.clouds{
+    position: absolute;
+    width: 230px;
+    display: flex;
+    margin-top: 40px;
+   
+}
+/* NUVEM */
+.clouds2{
+    position: absolute;
+    width: 230px;
+    display: inline-block;
+    top: 50px; /* Define a distância do topo */
+    right: 0;
+}
+/* NUVEM */
+
+
+@keyframes pipe-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+@keyframes jump{
+    0%{
+        bottom: 0;
+    }
+    40%{
+        bottom: 180px;
+    }
+    50%{
+        bottom: 180px;
+    }
+    60%{
+        bottom: 180px;
+    }
+    100%{
+        bottom: 0;
+    }
+
+}
